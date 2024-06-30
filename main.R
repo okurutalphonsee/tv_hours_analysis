@@ -16,13 +16,13 @@ pacman::p_load(tidyverse,
               here)
 
 #Summary of numbers of hours watched by Marital status
-tv_hours_table <-  
+tv_hours_tab <-  
 gss_cat %>% 
   filter(age<30) %>% 
    group_by(marital) %>% 
      summarize(mean_tv_hours = mean(tvhours,na.rm=T))
 
-write_csv(tv_hours_table,here("Tv_hours_by_marital.csv"))
+write_csv(tv_hours_tab,here("Tv_hours_by_marital.csv"))
  
  
   
